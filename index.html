@@ -1,0 +1,61 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #quote-container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="quote-container">
+        <p id="quote"></p>
+        <button id="new-quote">Get New Quote</button>
+    </div>
+    <script>
+        const quotes = [
+            "The only way to do great work is to love what you do. – Steve Jobs",
+            "Life is what happens when you're busy making other plans. – John Lennon",
+            "Get busy living or get busy dying. – Stephen King",
+            "You have within you right now, everything you need to deal with whatever the world can throw at you. – Brian Tracy",
+            "Believe you can and you're halfway there. – Theodore Roosevelt"
+        ];
+
+        const quoteElement = document.getElementById('quote');
+        const button = document.getElementById('new-quote');
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        }
+
+        button.addEventListener('click', getRandomQuote);
+
+        // Get a quote when the page loads
+        getRandomQuote();
+    </script>
+</body>
+</html>
+```
