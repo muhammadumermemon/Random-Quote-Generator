@@ -13,7 +13,7 @@ A simple web application that displays random quotes. Click the button to get a 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/Random-Quote-Generator.git
+   git clone https://github.com/muhammadumermemon/Random-Quote-Generator.git
    ```
 2. Open `index.html` in your web browser.
 3. Click the "Get New Quote" button to see a new quote.
